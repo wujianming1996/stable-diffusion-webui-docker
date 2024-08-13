@@ -46,3 +46,8 @@ Special thanks to everyone behind these awesome projects, without them, none of 
 - [CompVis/stable-diffusion](https://github.com/CompVis/stable-diffusion)
 - [Sygil-webui](https://github.com/Sygil-Dev/sygil-webui)
 - and many many more.
+
+## 启动容器
+``` bash
+docker-compose up --build auto -d
+```
