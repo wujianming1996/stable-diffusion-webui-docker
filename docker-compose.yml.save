@@ -24,7 +24,6 @@ services:
     volumes:
       - *v1
 
-
   auto: &automatic
     <<: *base_service
     profiles: ["auto"]
@@ -32,8 +31,7 @@ services:
     image: sd-auto:78
     environment:
       - CLI_ARGS=--allow-code --medvram --xformers --enable-insecure-extension-access --api
-    restart: always  
-  
+
   auto-cpu:
     <<: *automatic
     profiles: ["auto-cpu"]
@@ -48,13 +46,11 @@ services:
     image: sd-comfy:7
     environment:
       - CLI_ARGS=
-    restart: always
 
 
   comfy-cpu:
     <<: *comfy
     profiles: ["comfy-cpu"]
     deploy: {}
-    restart: always
     environment:
       - CLI_ARGS=--cpu
